@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Montserrat:wght@700&display=swap');
 html{
   scroll-behavior: smooth;
   padding: 0;
@@ -17,7 +18,7 @@ article{
 }
 
 body {
-	margin: 0;
+  margin: 0;
   color: aliceblue;
   transition: all 1s ease-in-out;
   background-attachment: fixed;
@@ -47,6 +48,7 @@ body {
 	height: 100vh;
 	overflow-y: scroll;
 	scroll-snap-type: y   mandatory;
+  -webkit-overflow-scrolling: touch;
 }
 
 section {
@@ -57,6 +59,7 @@ section {
 /* Other styles */
 section {
   position: relative;
+  overflow: visible;
 }
 
 .nav  > img{
@@ -134,16 +137,21 @@ section {
   background-image: linear-gradient(45deg,#6a3a28,#fa8860);
 }
 .article-container{
-  margin-left: 30%;
+  margin-left: 15%;
   margin-bottom: 10%;
-  max-width: 65%;
+  max-width: 85%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 .article-head{
+  font-family: 'Montserrat', sans-serif;
   font-size: 4rem;
   cursor: default;
   white-space:nowrap;
 }
 .article-body{
+  font-family: 'JetBrains Mono', monospace;
   cursor: default;
   font-size: 1.2rem;
 }
@@ -174,12 +182,83 @@ section {
   height: 30px;
   width: 30px;
 }
+.contact-card{
+  background: whitesmoke;
+  color: #1f222b;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  width: 300px;
+  padding:5px;
+  padding-inline: 20px;
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 40px;
+  margin-bottom: 20px;
+}
+.details>div{
+  padding: 2px;
+  padding-inline: 5px;
+}
+.write-container{
+  align-self: center;
+
+  /* background-color: #1f222b; */
+  width: 400px;
+  min-width: 320px;
+  display: flex;
+  font-family: 'JetBrains Mono', monospace;
+  flex-direction: column;
+  align-items: flex-end;
+  /* padding-inline: 20px; */
+  margin-top: 10px;
+}
+.write-container>h3{
+  align-self: flex-start;
+  padding: 5px;
+  margin: 0;
+}
+.write-container  > div{
+  padding: 5px;
+}
+hr{
+  justify-self: center;
+  align-self: center;
+  width: 90%;
+}
+.designation{
+  background-color: #7c88ac;
+  border-radius: 15px;
+}
+.avatar{
+  height: 90%;
+  filter: invert(1);
+}
+
+.follow{
+  font-family: 'JetBrains Mono', monospace;
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+footer div{
+  margin: 5px;
+}
+.inline{
+  display: flex;
+}
 @media (max-width:1200px) and (min-width:1000px) {
   .article-head{
     font-size: 3.2rem;
   }
   .article-body{
     font-size: 1.1rem;
+  }
+  .sponsor{
+    min-width: 120px;
   }
 }
 @media (max-width:1000px) and (min-width:768px) {
@@ -190,7 +269,7 @@ section {
     font-size: 1rem;
   }
   .sponsor{
-    min-width: 120px;
+    min-width: 87px;
   }
 }
 @media (max-width:768px) {
@@ -199,27 +278,34 @@ section {
     left: 0;
     filter: saturate(.7) brightness(0.5) blur(2px);
   }
+  /* .scroll-container {
+    scroll-snap-type: unset;
+  }
+  section{
+    scroll-snap-align: unset;
+  } */
   article{
     width: 100vw;
   }
   .article-container{
     margin: 0;
     margin-bottom: 15vh;
-    margin-left: 40px;
-    max-width: 70%;
+    /* margin-left: 40px; */
+    max-width: 85%;
   }
   .article-head{
     font-size: 2.2rem;
+    margin: 0;
     white-space: unset;
   }
   .nav{
     display: none;
   }
   .article-body{
-    font-size: 0.95rem;
+    font-size: 0.9rem;
   }
   .sponsor{
-    min-width: 60px;
+    min-width: 80px;
     /* width: 150px; */
   }
 }
