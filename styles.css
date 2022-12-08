@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono&family=Montserrat:wght@700&display=swap');
-html{
+html,.scroll-container{
   scroll-behavior: smooth;
   padding: 0;
   margin: 0;
+}
+a{
+  text-decoration: none;
 }
 * {
 	box-sizing: border-box;
@@ -16,20 +19,17 @@ article{
   justify-content: center;
   align-items: center;
 }
-
 body {
   margin: 0;
-  color: aliceblue;
+  color: #f0f8ff;
   transition: all 1s ease-in-out;
   background-attachment: fixed;
-  /* background-image: url(./assets/images/certificates.jpg); */
   background-size:50vw 100vh;
   background-color: black;
   background-position: right;
   background-repeat: no-repeat;
-	font-family: 'Helvetica', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 }
-
 .bg-img{
   height: 100vh;
   width: 50vw;
@@ -50,38 +50,28 @@ body {
 	scroll-snap-type: y   mandatory;
   -webkit-overflow-scrolling: touch;
 }
-
 section {
 	height: 100vh;
 	scroll-snap-align: center;
 }
-
 /* Other styles */
 section {
   position: relative;
   overflow: visible;
 }
-
 .nav  > img{
   position: absolute;
   left: 2vw;
-  /* top: 50vh; */
   height: 60px;
   width: 40px;
   margin: 10px  0px;
   transition: height  0.2s ease-in-out;
   z-index:  1;
 }
-
 .nav  > #nav-up:hover, .nav  > #nav-down:hover{
   height: 90px;
   width: 40px;
 }
-/* .nav  > #up:hover~  #down, .nav  > #down:hover~  #up{
-  height: 60px;
-  width: 40px;
-} */
-
 #nav-up{
   rotate: 180deg;
   bottom: 55vh;
@@ -90,8 +80,6 @@ section {
   top: 55vh;
 }
 .hero{
-  /* background-image: linear-gradient(red,yellow); */
-  /* filter: blur(1px); */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -99,11 +87,9 @@ section {
 	justify-content: center;
   overflow-y: hidden;
   background-color: #000;
-  /* z-index: 300; */
 }
 .hero::before{
   background-image: url(./assets/images/DSC_0092.jpg);
-  /* background-color: #000; */
   width: 100vw;
   height: 100vh;
   display: block;
@@ -120,24 +106,44 @@ section {
   justify-content: center;
   align-items: center;
 }
+
 .hero-button{
-  color: #ccc;
-  font-weight: 500;
+  color: #1f222b;
+  font-weight: 600;
+  font-size: 0.9rem;
+  font-family: 'JetBrains Mono', monospace;
   margin: 10px;
-  /* flex-wrap: nowrap; */
   width: 150px;
   text-align: center;
-  padding: 12px;
-  border-radius: 30px; 
-  background-color: #1f222b;
-  background-image: linear-gradient(45deg,#1f222b,#7c88ac);
-  box-shadow: #000 0px 2px  5px;
+  /* font-family: 'Montserrat', sans-serif; */
+  padding: 10px;
+  border-radius: 10px; 
+  backdrop-filter: hue-rotate(-0.25turn);
+  border: #000 solid 2px;
+  background-color: #c57d91;
+  position: relative;
+  box-shadow: #000 0px 5px 0px 1px;
+  /* transition: all 0.2s ; */
 }
-#collab{
-  background-image: linear-gradient(45deg,#6a3a28,#fa8860);
+.hero-button:hover{
+  box-shadow: #000 0px 2px;
+  bottom: -3px;
 }
+#collab2{
+  color: aliceblue;
+  border-color: #000;
+  /* background-image: linear-gradient(45deg,#6a3a28,#fa8860); */
+  background-color: #5e3148;
+  box-shadow: #000 0px 5px;
+}
+#collab2:hover{
+  box-shadow: #000 0px 2px;
+  bottom: -3px;
+}
+
 .article-container{
   margin-left: 15%;
+  margin-right: 5%;
   margin-bottom: 10%;
   max-width: 85%;
   display: flex;
@@ -183,8 +189,6 @@ section {
   width: 30px;
 }
 .contact-card{
-  background: whitesmoke;
-  color: #1f222b;
   display: flex;
   position: relative;
   align-items: center;
@@ -192,10 +196,22 @@ section {
   height: 80px;
   width: 300px;
   padding:5px;
-  padding-inline: 20px;
   font-family: 'JetBrains Mono', monospace;
   border-radius: 40px;
   margin-bottom: 20px;
+  overflow: hidden;
+  backdrop-filter: blur(5px) contrast(2);
+  background-color: #ffffff50;
+}
+.card-margin-updown{
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.card-margin-left{
+  margin-left: 20px;
+}
+.card-margin-right{
+  margin-right: 20px;
 }
 .details>div{
   padding: 2px;
@@ -203,15 +219,13 @@ section {
 }
 .write-container{
   align-self: center;
-
-  /* background-color: #1f222b; */
-  width: 400px;
-  min-width: 320px;
+  width: 85%;
+  max-width: 400px;
+  min-width: 300px;
   display: flex;
   font-family: 'JetBrains Mono', monospace;
   flex-direction: column;
   align-items: flex-end;
-  /* padding-inline: 20px; */
   margin-top: 10px;
 }
 .write-container>h3{
@@ -228,14 +242,16 @@ hr{
   width: 90%;
 }
 .designation{
-  background-color: #7c88ac;
+  background-color: rgba(144, 238, 144, 0.5);
   border-radius: 15px;
 }
 .avatar{
   height: 90%;
-  filter: invert(1);
+  border-radius: 90%;
+  border-color: rgba(144, 238, 144, 0.5);
+  border-width: 2px;
+  border-style: solid;
 }
-
 .follow{
   font-family: 'JetBrains Mono', monospace;
 }
@@ -278,19 +294,12 @@ footer div{
     left: 0;
     filter: saturate(.7) brightness(0.5) blur(2px);
   }
-  /* .scroll-container {
-    scroll-snap-type: unset;
-  }
-  section{
-    scroll-snap-align: unset;
-  } */
   article{
     width: 100vw;
   }
   .article-container{
     margin: 0;
-    margin-bottom: 15vh;
-    /* margin-left: 40px; */
+    margin-bottom: 14vh;
     max-width: 85%;
   }
   .article-head{
@@ -306,7 +315,26 @@ footer div{
   }
   .sponsor{
     min-width: 80px;
-    /* width: 150px; */
+  }
+  .contact-card{
+    width: 250px;
+    height: 70px;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+  .card-margin-left{
+    margin-left: 6px;
+  }
+  .card-margin-right{
+    margin-right: 10px;
+  }
+  .card-margin-updown{
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+  .details>div{
+    padding: 1px;
+    padding-inline:2px;
   }
 }
 .mouse_scroll {
@@ -319,8 +347,6 @@ footer div{
   margin-left: auto;
   margin-right: auto;
 }
-
-
 .m_scroll_arrows
 {
   display: block;
@@ -329,21 +355,16 @@ footer div{
   -ms-transform: rotate(45deg); /* IE 9 */
   -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
   transform: rotate(45deg);
-   
   border-right: 2px solid #1f222b;
   border-bottom: 2px solid #1f222b;
   margin: 0 0 3px 4px;
-  
   width: 16px;
   height: 16px;
 }
-
-
 .unu
 {
   margin-top: 1px;
 }
-
 .unu, .doi, .trei
 {
     -webkit-animation: mouse-scroll 1s infinite;
@@ -351,7 +372,6 @@ footer div{
     animation: mouse-scroll 1s infinite;
   
 }
-
 .unu
 {
   -webkit-animation-delay: .1s;
@@ -361,32 +381,24 @@ footer div{
   animation-direction: alternate;
   animation-delay: alternate;
 }
-
 .doi
 {
   -webkit-animation-delay: .2s;
   -moz-animation-delay: .2s;
   -webkit-animation-direction: alternate;
-  
   animation-delay: .2s;
   animation-direction: alternate;
-  
   margin-top: -6px;
 }
-
 .trei
 {
   -webkit-animation-delay: .3s;
   -moz-animation-delay: .3s;
   -webkit-animation-direction: alternate;
-  
   animation-delay: .3s;
   animation-direction: alternate;
-  
-  
   margin-top: -6px;
 }
-
 .mouse {
   height: 42px;
   width: 24px;
@@ -395,7 +407,6 @@ footer div{
   border: 2px solid #1f222b;
   top: 170px;
 }
-
 .wheel {
   height: 5px;
   width: 2px;
@@ -403,20 +414,17 @@ footer div{
   margin: 5px auto;
   background: #1f222b;
   position: relative;
-  
   height: 4px;
   width: 4px;
   border: 2px solid #1f222b;
   -webkit-border-radius: 8px;
           border-radius: 8px;
 }
-
 .wheel {
   -webkit-animation: mouse-wheel 0.6s linear infinite;
   -moz-animation: mouse-wheel 0.6s linear infinite;
   animation: mouse-wheel 0.6s linear infinite;
 }
-
 @-webkit-keyframes mouse-wheel{
    0% {
     opacity: 1;
@@ -424,7 +432,6 @@ footer div{
     -ms-transform: translateY(0);
     transform: translateY(0);
   }
-
   100% {
     opacity: 0;
     -webkit-transform: translateY(6px);
@@ -440,7 +447,6 @@ footer div{
   100% { top: 1px;}
 }
 @-o-keyframes mouse-wheel {
-
    0% { top: 1px; }
   25% { top: 2px; }
   50% { top: 3px;}
@@ -448,34 +454,28 @@ footer div{
   100% { top: 1px;}
 }
 @keyframes mouse-wheel {
-
    0% { top: 1px; }
   25% { top: 2px; }
   50% { top: 3px;}
   75% { top: 2px;}
   100% { top: 1px;}
 }
-
 @-webkit-keyframes mouse-scroll {
-
   0%   { opacity: 0;}
   50%  { opacity: .5;}
   100% { opacity: 1;}
 }
 @-moz-keyframes mouse-scroll {
-
   0%   { opacity: 0; }
   50%  { opacity: .5; }
   100% { opacity: 1; }
 }
 @-o-keyframes mouse-scroll {
-
   0%   { opacity: 0; }
   50%  { opacity: .5; }
   100% { opacity: 1; }
 }
 @keyframes mouse-scroll {
-
   0%   { opacity: 0; }
   50%  { opacity: .5; }
   100% { opacity: 1; }
