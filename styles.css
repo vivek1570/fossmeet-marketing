@@ -6,6 +6,7 @@ html,.scroll-container{
 }
 a{
   text-decoration: none;
+  color: inherit;
 }
 * {
 	box-sizing: border-box;
@@ -134,7 +135,7 @@ section {
   border-color: #000;
   /* background-image: linear-gradient(45deg,#6a3a28,#fa8860); */
   background-color: #5e3148;
-  box-shadow: #000 0px 5px;
+  box-shadow: #000 0px 5px 0px 1px;
 }
 #collab2:hover{
   box-shadow: #000 0px 2px;
@@ -171,10 +172,11 @@ section {
   position: relative;
   min-width: 150px;
   margin: 10px;
+  width: 30%;
+  display: flex;
 }
 .sponsor>img{
   width: 100%;
-  height: 100%;
 }
 .socials{
   position: absolute;
@@ -202,6 +204,7 @@ section {
   overflow: hidden;
   backdrop-filter: blur(5px) contrast(2);
   background-color: #ffffff50;
+  font-size: 0.9rem;
 }
 .card-margin-updown{
   margin-top: 5px;
@@ -244,6 +247,7 @@ hr{
 .designation{
   background-color: rgba(144, 238, 144, 0.5);
   border-radius: 15px;
+  width: fit-content;
 }
 .avatar{
   height: 90%;
@@ -265,6 +269,16 @@ footer div{
 }
 .inline{
   display: flex;
+  margin-top: 10px;
+}
+.f-image>img{
+  height: 50px;
+}
+#fmeet{
+  height: 80px;
+}
+.invert{
+  filter: invert(1)
 }
 @media (max-width:1200px) and (min-width:1000px) {
   .article-head{
@@ -289,6 +303,9 @@ footer div{
   }
 }
 @media (max-width:768px) {
+  .mouse_scroll{
+    margin-bottom: 50px;
+  }
   .bg-img{
     width: 100vw;
     left: 0;
@@ -299,7 +316,7 @@ footer div{
   }
   .article-container{
     margin: 0;
-    margin-bottom: 14vh;
+    margin-bottom: 16vh;
     max-width: 85%;
   }
   .article-head{
@@ -320,7 +337,7 @@ footer div{
     width: 250px;
     height: 70px;
     margin-bottom: 10px;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
   }
   .card-margin-left{
     margin-left: 6px;
@@ -336,6 +353,12 @@ footer div{
     padding: 1px;
     padding-inline:2px;
   }
+  .f-image{
+    height: 30px;
+  }
+  #fmeet{
+    height: 50px;
+  }
 }
 .mouse_scroll {
 	display: block;
@@ -343,23 +366,21 @@ footer div{
 	height: 100px;
   position: absolute;
   bottom: 0;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
   margin-left: auto;
   margin-right: auto;
 }
 .m_scroll_arrows
 {
   display: block;
-  width: 5px;
-  height: 5px;
   -ms-transform: rotate(45deg); /* IE 9 */
   -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
   transform: rotate(45deg);
   border-right: 2px solid #1f222b;
   border-bottom: 2px solid #1f222b;
   margin: 0 0 3px 4px;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 .unu
 {
