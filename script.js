@@ -1,3 +1,21 @@
+function iOS() {
+  return [
+    'iPad Simulator',
+    'iPhone Simulator',
+    'iPod Simulator',
+    'iPad',
+    'iPhone',
+    'iPod'
+  ].includes(navigator.platform)
+  || (navigator.userAgent.includes("Mac") && "ontouchend" in document)
+}
+if (iOS()) {
+  document.getElementById('alert').style.opacity=1
+}
+const cls = ()  =>{
+  console.log('clicked');
+  document.getElementById('alert').style.opacity=0
+}
 const scr =   (scrl=600)=>{    document.getElementById('main').scrollBy({
     behavior:"smooth",
     left:0,

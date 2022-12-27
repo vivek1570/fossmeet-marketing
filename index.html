@@ -9,18 +9,23 @@
 </head>
 <body>
     <div class="bg">
-        <img    class="bg-img" src="./assets/images/certificates.jpg" alt="background">
-        <img    class="bg-img" src="./assets/images/grocery.jpg" alt="background">
-        <img    class="bg-img" src="./assets/images/photo_2022-05-26_16-03-08.jpg" alt="background">
-        <img    class="bg-img" src="./assets/images/zoom.jpg" alt="background">
+        <img    class="bg-img" src="./assets/images//about.webp" alt="background">
+        <img    class="bg-img" src="./assets/images/past.webp" alt="background">
+        <img    class="bg-img" src="./assets/images/sponsor1.jpg" alt="background">
+        <img    class="bg-img" src="./assets/images/prev1.jpg" alt="background">
+        <img    class="bg-img" src="./assets/images/contact.webp" alt="background">
     </div>
     <main class="scroll-container"  id="main">
         <section class="section hero"   style="z-index: 500" data-bg="100">
-            <!-- <h1>Heroooooo</h1> -->
-            <!-- <img src="./assets/images/fossmeet_black.png" alt="logo" height="30%"> -->
-            <img src="./assets/svgs/SVG Version/FOSSMeet 23 Logo Black.svg" alt="FOSSMEET'23"  width="70%">
+            <div class="alert-container"    id="alert">
+                <div class="alert-title">Attention! ⚠️</div>
+                <div class="alert-description">You are using an iOS device. The user experience in iOS is not good as it does not provide proper viewport height for scroll snap. <b>Please switch to your PC or an android device for better experience</b></div>
+                <div class="alert-button" onclick="cls()">Close ❌</div>
+            </div>
+            <img    id="hero-logo" src="./assets/svgs/logo.svg" alt="logo">
+            <img    id="hero-text"  src="./assets/images/FOSSMeet 23 aliceblue.png" alt="FOSSMEET'23">
             <div class="hero-button-container">
-                <div class="hero-button">Brochure</div>
+                <a href="#" download><div class="hero-button">Brochure</div></a>
                 <a href="#collab">    <div class="hero-button"    id="collab2">Let's Collab!</div></a>
             </div>
             <div class="mouse_scroll"   onclick="scr()">
@@ -93,7 +98,7 @@
                 </div>
             </article>
         </section>
-        <section    id="collab"    class="section" data-bg="0">
+        <section    id="collab"    class="section" data-bg="4">
             <article>
                 <div class="article-container">
                     <h1 class="article-head">Contacts</h1>
@@ -143,7 +148,7 @@
                     </div>
                     <hr>
                     <footer>
-                            <a href="https://fossmeet.net/" class="f-image invert"><img id="fmeet" src="./assets/svgs/SVG Version/FOSSMeet 23 Logo Black.svg" alt="fossmeet"></a>
+                            <a href="https://fossmeet.net/" class="f-image"><img src="./assets/images/FOSSMeet 23 aliceblue.png" height="50px" alt="fossmeet"></a>
                         <div class="inline">
                             <a href="http://assoc.cse.nitc.ac.in" class="f-image invert"><img src="./assets/images/FOSS CSEA Logos/csea.png" alt="CSEA-NITC"></a>
                             <a href="https://fosscell.org/" target="_blank" class="f-image"><img src="./assets/images/FOSS CSEA Logos/fosscell.png" alt="FOSSCELL-NITC"></a>
