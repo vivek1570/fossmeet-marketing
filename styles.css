@@ -156,7 +156,7 @@ section {
   font-family: 'Montserrat', sans-serif;
   font-size: 4rem;
   cursor: default;
-  white-space:nowrap;
+  /* white-space:nowrap; */
 }
 .article-body{
   font-family: 'JetBrains Mono', monospace;
