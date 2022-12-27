@@ -11,10 +11,12 @@ function iOS() {
 }
 if (iOS()) {
   document.getElementById('alert').style.opacity=1
+  document.getElementById('alert').style.zIndex=200
 }
 const cls = ()  =>{
   console.log('clicked');
   document.getElementById('alert').style.opacity=0
+  document.getElementById('alert').style.zIndex=0
 }
 const scr =   (scrl=600)=>{    document.getElementById('main').scrollBy({
     behavior:"smooth",

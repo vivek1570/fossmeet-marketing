@@ -284,7 +284,7 @@ footer div{
   -webkit-filter: invert(1);
 }
 .alert-container{
-  z-index: 200;
+  z-index: 0;
   height: 400px;
   width: 300px;
   position: absolute;
